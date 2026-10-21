@@ -33,4 +33,28 @@ function takePhoto() {
   ctx.restore();
 }
 
-captureBtn.addEventListener("click", takePhoto);
+const countdownEl = document.getElementById("countdown");
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function startCountdown(seconds = 3) {
+  if (!video.videoWidth) {
+    alert("Please start the camera first.");
+    return;
+  }
+
+  captureBtn.disabled = true;
+
+  for (let i = seconds; i > 0; i--) {
+    countdownEl.textContent = i;
+    await wait(1000);
+  }
+
+  countdownEl.textContent = "";
+  takePhoto();
+  captureBtn.disabled = false;
+}
+
+captureBtn.addEventListener("click", () => startCountdown());
