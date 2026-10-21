@@ -20,3 +20,14 @@ button {
   color: white;
   cursor: pointer;
 }
+
+canvas {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+button {
+  margin: 8px 4px;
+}
