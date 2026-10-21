@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f6e9f0;
+}
+
+video {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 12px;
+  transform: scaleX(-1);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #8e3b6b;
+  color: white;
+  cursor: pointer;
+}
